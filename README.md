@@ -16,4 +16,3 @@ AWS Security Monitoring &amp; Alerting System A cloud-native security system usi
   <img src="https://img.shields.io/badge/Status-Active-success?style=flat://img.shields.io/badge/Licensetributions" />
   <img src="https://img.shields.io/badge/Contributions-Welcome-brightgreen?style"/>
 </p>
-cloud-native security monitoring solution for AWS that provides real-time detection, proactive alerting, and automated responses using AWS native services.
