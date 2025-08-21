@@ -1,0 +1,28 @@
+{
+  "MetricFilter": {
+    "filterName": "UnauthorizedAPICalls",
+    "logGroupName": "CloudTrail/DefaultLogGroup",
+    "filterPattern": "{ ($.errorCode = \"*UnauthorizedOperation\") || ($.errorCode = \"AccessDenied*\") }",
+    "metricTransformations": [
+      {
+        "metricName": "UnauthorizedAPICalls",
+        "metricNamespace": "CloudTrailMetrics",
+        "metricValue": "1"
+      }
+    ]
+  },
+  "Alarm": {
+    "AlarmName": "UnauthorizedAPICallsAlarm",
+    "AlarmDescription": "Alarm when unauthorized API calls are detected",
+    "ActionsEnabled": true,
+    "AlarmActions": ["arn:aws:sns:us-east-1:123456789012:SecurityAlerts"],
+    "MetricName": "UnauthorizedAPICalls",
+    "Namespace": "CloudTrailMetrics",
+    "Statistic": "Sum",
+    "Period": 300,
+    "EvaluationPeriods": 1,
+    "Threshold": 1,
+    "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+    "TreatMissingData": "notBreaching"
+  }
+}
