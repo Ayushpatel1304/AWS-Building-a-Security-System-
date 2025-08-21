@@ -2,10 +2,14 @@
 AWS Security Monitoring &amp; Alerting System A cloud-native security system using CloudTrail for API activity, CloudWatch for monitoring, SNS for alerts, and Lambda for automated responses. Enhances visibility, detects threats, and improves AWS security posture.
 
 ## Architecture Diagram  
+</p>
+<p align="center">
+  
+  ![AWS-Building-a-Security-System](./Diagram/Architecture.png)
 
-[AWS-Building-a-Security-System](./Diagram/Architecture.png)
-
+</P>
 </p> 
+
 <p align="center">
   <img src="https://img.shields.io/badge/AWS-Security-orange?logo=amazon-aws&logo" />
   <img src="https://img.shields.io/badge/Monitoring-CloudWatch-blue?logo=amazon-aws&logo" />
